@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cross Battle</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main Game Audio Element -->
+    <audio id="gameAudio" src="RIOT _ 072118 .mp3" autoplay loop preload="auto"></audio>
+
+    <!-- Sound Effect for Fire Button -->
+    <audio id="fireSound" src="https://www.myinstants.com/en/instant/rasengan/?utm_source=copy&utm_medium=share"></audio>
+
+    <!-- Start Screen -->
+    <div id="game">
+        <h1 class="glow">Cross Battle</h1>
+        <div id="status">
+            <p id="player-status"></p>
+            <p id="boss-status"></p>
+            <p id="remaining-enemies">Remaining Enemies: 0</p>
+        </div>
+    </div>
+
+    <div class="scoreboard">
+        <div class="round">Round <span class="rndCnt"></span></div>
+        <div class="flexer">
+            <div class="goatHealth"></div><span class="goat">Player1</span>
+            <div class="oppHealth"></div><span>Opp1</span>
+        </div>
+    </div>
+    <hr />
+    <div class="enemies">Player <span class="chance"> ?? </span>'s Turn</div>
+    <div class="gameboard">
+        <div class="p1">
+            <img src="https://e7.pngegg.com/pngimages/127/572/png-clipart-konan-pain-gaara-sasuke-uchiha-naruto-uzumaki-naruto-manga-sasuke-uchiha.png" alt="Konan" id="opp1">
+            <img src="https://i.pinimg.com/originals/23/3b/9b/233b9bd96c90844f161a7f6a698fda46.png" alt="Kisame" id="opp2">
+            <img src="https://e7.pngegg.com/pngimages/885/983/png-clipart-naruto-tobi-illustration-sasuke-uchiha-madara-uchiha-itachi-uchiha-obito-uchiha-naruto-uzumaki-obito-naruto-purple-cartoons-thumbnail.png" alt="Obito" id="opp3">
+            <img src="https://i.pinimg.com/originals/42/75/fe/4275fe898e39c583a327d9ad5462d4f6.jpg" alt="Nagato" id="opp4">
+            <img src="https://i.pinimg.com/originals/93/e1/1b/93e11b882c990c7e0ba534b44804f0a6.png" alt="Itachi" id="opp5">
+        </div>
+        <div class="fightArena"></div>
+        <div class="p2">
+            <img src="https://i.pinimg.com/originals/69/da/d1/69dad11ae9d52058f849d0995cff945d.png" alt="Naruto" id="goat">
+        </div>
+    </div>
+
+    <div class="infoBox">
+        <button onclick="startGame()">Start Game</button>
+        <button id="fireButton">Fire</button>
+        <button onclick="retreat()">Restart</button>
+        <button onclick="add_round()">Change Round</button>
+        <button onclick="toggleTurn()">Toggle Turn</button>
+    </div>
+
+    <div id="log"></div> <!-- Battle log display -->
+
+    <script src="app.js" async defer></script>
+</body>
+</html>

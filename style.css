@@ -1,0 +1,141 @@
+/* General Body Styling */
+body {
+    background-image: url("https://media.tenor.com/VmYu9GPKj_AAAAAM/naruto-shippuden-kakashi.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Center the rectangular log box in the middle of the page */
+#log {
+    position: fixed; /* Keep it fixed in place */
+    top: 65%; /* Almost Center vertically */
+    left: 65%; /* Almost Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to center */
+    width: 70%; /* Reduced width by 10% from the original 80% */
+    max-width: 540px; /* Limit maximum width, reduced by 10% from 600px */
+    height: 270px; /* Reduced height by 10% from the original 300px */
+    background-color: black; /* Black background */
+    color: red; /* Red text color */
+    border: 2px solid red; /* Red border for better visibility */
+    padding: 10px;
+    overflow-y: auto; /* Scrollable if content overflows */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5); /* Optional: Shadow for better visibility */
+    text-align: left; /* Align text to the left */
+}
+
+/* Scoreboard styles */
+.scoreboard {
+    border: solid black;
+    color: peru;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    margin: 10px;
+}
+
+.scoreboard .flexer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.goatHealth, .oppHealth {
+    border: solid black;
+    background-color: rgb(17, 255, 0);
+    height: 30px; /* Increased height for better visibility */
+    width: 150px; /* Adjust width as needed */
+    text-align: center;
+    line-height: 30px; /* Center text vertically */
+    padding: 5px;
+    border-radius: 5px; /* Optional rounded corners */
+}
+
+.goatHealth {
+    background-color: #4CAF50; /* Distinct color for player health */
+}
+
+.oppHealth {
+    background-color: #f44336; /* Distinct color for enemy health */
+}
+
+/* Other styles */
+.gameboard {
+    border: solid black;
+    height: 65vh;
+    margin: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.p1 {
+    width: 40%;
+    display: block;
+    flex-wrap: wrap;
+    border: solid black;
+}
+
+.p2 {
+    border: solid peru;
+}
+
+.fightArena {
+    color: gold;
+}
+
+.glow {
+    font-size: 80px;
+    color: #0b0b0a;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fc0606, 0 0 20px #d4f808, 0 0 30px #00b4e6, 0 0 40px #00b4e6, 0 0 50px #00cbe6, 0 0 60px #00cbe6, 0 0 70px #00cbe6;
+    }
+    
+    to {
+        text-shadow: 0 0 20px #04f52c, 0 0 30px #9812e0, 0 0 40px #b026ec, 0 0 50px #b705e4, 0 0 60px #930bab, 0 0 70px #8f01cb, 0 0 80px #8e03c9;
+    }
+}
+
+#opp1, #opp2, #opp3, #opp4, #opp5 {
+    border: solid black;
+    margin: 1em;
+    height: 90px;
+    width: 90px;
+}
+
+#goat {
+    border: solid black;
+    margin: 1em;
+    height: 110px;
+    width: 110px;
+}
+
+.round {
+    width: 50%;
+}
+
+.rndCnt {
+    color: peru;
+    border: goldenrod;
+    height: 60px;
+    text-align: justify;
+}
+
+.infoBox {
+    border: solid black;
+    height: 120px;
+}
+
+.infoBox button {
+    border: solid blue;
+}
